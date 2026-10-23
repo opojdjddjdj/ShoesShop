@@ -1,8 +1,8 @@
 namespace ShoesShop
 {
-    public partial class Form1 : Form
+    public partial class FormProducts : Form
     {
-        public Form1()
+        public FormProducts()
         {
             InitializeComponent();
         }
