@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShoesShop.Properties;
+using System;
 using System.Collections.Generic;
 
 namespace ShoesShop.Models;

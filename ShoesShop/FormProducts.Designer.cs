@@ -28,50 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProducts));
             dgvProducts = new DataGridView();
-            label1 = new Label();
             panelTop = new Panel();
+            lblCount = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvProducts).BeginInit();
+            panelTop.SuspendLayout();
             SuspendLayout();
             // 
             // dgvProducts
             // 
             dgvProducts.AllowUserToAddRows = false;
             dgvProducts.AllowUserToDeleteRows = false;
+            dgvProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvProducts.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dgvProducts.BackgroundColor = Color.White;
+            dgvProducts.BackgroundColor = Color.FromArgb(210, 246, 231);
             dgvProducts.BorderStyle = BorderStyle.None;
             dgvProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Window;
-            dataGridViewCellStyle3.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgvProducts.DefaultCellStyle = dataGridViewCellStyle3;
+            dgvProducts.ColumnHeadersVisible = false;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Window;
+            dataGridViewCellStyle1.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(112, 178, 175);
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvProducts.DefaultCellStyle = dataGridViewCellStyle1;
             dgvProducts.Dock = DockStyle.Fill;
-            dgvProducts.Location = new Point(10, 10);
+            dgvProducts.Location = new Point(10, 60);
             dgvProducts.MultiSelect = false;
             dgvProducts.Name = "dgvProducts";
             dgvProducts.ReadOnly = true;
             dgvProducts.RowHeadersVisible = false;
             dgvProducts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvProducts.Size = new Size(964, 641);
+            dgvProducts.Size = new Size(964, 591);
             dgvProducts.TabIndex = 1;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(419, 22);
-            label1.Name = "label1";
-            label1.Size = new Size(56, 23);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
             // 
             // panelTop
             // 
+            panelTop.Controls.Add(lblCount);
             panelTop.Dock = DockStyle.Top;
             panelTop.Location = new Point(10, 10);
             panelTop.Name = "panelTop";
@@ -79,29 +75,40 @@
             panelTop.Size = new Size(964, 50);
             panelTop.TabIndex = 2;
             // 
-            // Form1
+            // lblCount
+            // 
+            lblCount.Dock = DockStyle.Fill;
+            lblCount.Location = new Point(0, 0);
+            lblCount.Name = "lblCount";
+            lblCount.Size = new Size(964, 40);
+            lblCount.TabIndex = 0;
+            lblCount.Text = "Товаров: 0";
+            lblCount.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // FormProducts
             // 
             AutoScaleDimensions = new SizeF(10F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(984, 661);
-            Controls.Add(panelTop);
             Controls.Add(dgvProducts);
+            Controls.Add(panelTop);
             Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 5, 4, 5);
-            Name = "Form1";
+            Name = "FormProducts";
             Padding = new Padding(10);
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Список товаров";
             ((System.ComponentModel.ISupportInitialize)dgvProducts).EndInit();
+            panelTop.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel1;
-        private DataGridView dgvProducts;
-        private Label label1;
         private Panel panelTop;
+        private DataGridView dgvProducts;
+        private Label lblCount;
     }
 }
